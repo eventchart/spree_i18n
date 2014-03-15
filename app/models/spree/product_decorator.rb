@@ -1,7 +1,6 @@
 module Spree
   Product.class_eval do
-    translates :name, :description, :meta_description, :meta_keywords, :slug,
-      :fallbacks_for_empty_translations => true
+    translates :name, :description, :meta_description, :meta_keywords, :slug
     include SpreeI18n::Translatable
 
     def duplicate_extra(old_product)
